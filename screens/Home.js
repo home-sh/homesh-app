@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet, ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import SalleHome from '../components/SalleHome';
+
 export default class Home extends Component {
   render() {
     return (
@@ -26,16 +28,16 @@ export default class Home extends Component {
         </View>
         <View style={styles.salleContainer}>
           <View style={styles.salleFlex}>
-            <View style={styles.salleSquare} />
-            <View style={styles.salleSquare} />
+            <SalleHome />
+            <SalleHome />
           </View>
           <View style={styles.salleFlex}>
-            <View style={styles.salleSquare} />
-            <View style={styles.salleSquare} />
+            <SalleHome />
+            <SalleHome />
           </View>
           <View style={styles.salleFlex}>
-            <View style={styles.salleSquare} />
-            <View style={styles.salleSquare} />
+            <SalleHome />
+            <SalleHome />
           </View>
         </View>
       </ScrollView>
@@ -81,14 +83,6 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 40,
-  },
-  salleSquare: {
-    flex: 1,
-    marginTop: 30,
-    height: 120,
-    marginRight: 25,
-    marginLeft: 25,
-    backgroundColor: 'grey',
   },
   salleContainer: {
     marginBottom: 25,
