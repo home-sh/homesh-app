@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet, ScrollView} from 'react-native';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 export default class Home extends Component {
   render() {
     return (
@@ -20,7 +20,10 @@ export default class Home extends Component {
           <View style={styles.favorisSquare} />
           <View style={styles.favorisSquare} />
         </ScrollView>
-        <Text style={styles.Text}> Salle </Text>
+        <View style={styles.addRoomView}>
+          <Text style={styles.TextSalle}> Salle </Text>
+          <Icon name="plus-circle" size={30} style={styles.icon} />
+        </View>
         <View style={styles.salleContainer}>
           <View style={styles.salleFlex}>
             <View style={styles.salleSquare} />
@@ -47,6 +50,11 @@ const styles = StyleSheet.create({
   Text: {
     marginLeft: 40,
   },
+  TextSalle: {
+    flex: 1,
+    marginLeft: 40,
+    alignItems: 'flex-start',
+  },
   favorisFlex: {
     flex: 1,
     flexDirection: 'row',
@@ -56,8 +64,7 @@ const styles = StyleSheet.create({
   salleFlex: {
     flex: 1,
     flexDirection: 'row',
-    marginLeft: 10,
-    marginRight: 20,
+    alignContent: 'center',
   },
   favorisSquare: {
     marginTop: 30,
@@ -68,12 +75,19 @@ const styles = StyleSheet.create({
     height: 75,
     backgroundColor: 'grey',
   },
+  addRoomView: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  icon: {
+    marginRight: 40,
+  },
   salleSquare: {
+    flex: 1,
     marginTop: 30,
-    width: 150,
-    height: 150,
-    marginRight: 5,
-    marginLeft: 10,
+    height: 120,
+    marginRight: 25,
+    marginLeft: 25,
     backgroundColor: 'grey',
   },
   salleContainer: {
