@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
     width: 140,
     height: 140,
     marginBottom: 25,
-    marginRight: 30,
-    marginLeft: 30,
+    marginRight: 25,
+    marginLeft: 25,
   },
   icon: {
     marginRight: 40,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   TextDevice: {
     flex: 1,
-    marginLeft: 40,
+    marginLeft: 30,
     fontSize: 20,
     alignItems: 'flex-start',
   },
