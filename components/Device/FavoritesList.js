@@ -9,25 +9,25 @@ export default class FavoritesList extends Component {
         <Text style={styles.Text}> Favoris </Text>
         <ScrollView horizontal style={styles.favorisFlex}>
           <View style={styles.viewStyle}>
-            <DeviceButton />
+            <DeviceButton navigation={this.props.navigation} />
           </View>
           <View style={styles.viewStyle}>
-            <DeviceButton />
+            <DeviceButton navigation={this.props.navigation} />
           </View>
           <View style={styles.viewStyle}>
-            <DeviceButton />
+            <DeviceButton navigation={this.props.navigation} />
           </View>
           <View style={styles.viewStyle}>
-            <DeviceButton />
+            <DeviceButton navigation={this.props.navigation} />
           </View>
           <View style={styles.viewStyle}>
-            <DeviceButton />
+            <DeviceButton navigation={this.props.navigation} />
           </View>
           <View style={styles.viewStyle}>
-            <DeviceButton />
+            <DeviceButton navigation={this.props.navigation} />
           </View>
           <View style={styles.viewStyle}>
-            <DeviceButton />
+            <DeviceButton navigation={this.props.navigation} />
           </View>
         </ScrollView>
       </View>

@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {TouchableHighlight, StyleSheet, Text} from 'react-native';
 
 export default class DeviceButton extends Component {
   render() {
-    return <View style={styles.favorisSquare} />;
+    return (
+      <TouchableHighlight
+        style={styles.favorisSquare}
+        onPress={() => this.props.navigation.navigate('Device')}>
+        <Text>Device</Text>
+      </TouchableHighlight>
+    );
   }
 }
 

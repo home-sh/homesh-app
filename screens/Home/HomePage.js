@@ -11,7 +11,7 @@ export default class HomePage extends Component {
     console.log(this.props.navigation);
     return (
       <ScrollView style={styles.mainContainer}>
-        <FavoritesList />
+        <FavoritesList navigation={this.props.navigation} />
         <RoomList navigation={this.props.navigation} />
       </ScrollView>
     );

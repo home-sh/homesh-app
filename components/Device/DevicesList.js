@@ -18,34 +18,34 @@ export default class DeviceList extends Component {
         <View style={styles.deviceContainer}>
           <View style={styles.deviceFlex}>
             <View style={styles.viewStyle}>
-              <DeviceButton />
+              <DeviceButton navigation={this.props.navigation} />
             </View>
             <View style={styles.viewStyle}>
-              <DeviceButton />
-            </View>
-          </View>
-          <View style={styles.deviceFlex}>
-            <View style={styles.viewStyle}>
-              <DeviceButton />
-            </View>
-            <View style={styles.viewStyle}>
-              <DeviceButton />
+              <DeviceButton navigation={this.props.navigation} />
             </View>
           </View>
           <View style={styles.deviceFlex}>
             <View style={styles.viewStyle}>
-              <DeviceButton />
+              <DeviceButton navigation={this.props.navigation} />
             </View>
             <View style={styles.viewStyle}>
-              <DeviceButton />
+              <DeviceButton navigation={this.props.navigation} />
             </View>
           </View>
           <View style={styles.deviceFlex}>
             <View style={styles.viewStyle}>
-              <DeviceButton />
+              <DeviceButton navigation={this.props.navigation} />
             </View>
             <View style={styles.viewStyle}>
-              <DeviceButton />
+              <DeviceButton navigation={this.props.navigation} />
+            </View>
+          </View>
+          <View style={styles.deviceFlex}>
+            <View style={styles.viewStyle}>
+              <DeviceButton navigation={this.props.navigation} />
+            </View>
+            <View style={styles.viewStyle}>
+              <DeviceButton navigation={this.props.navigation} />
             </View>
           </View>
         </View>

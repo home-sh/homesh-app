@@ -6,7 +6,7 @@ export default class RoomPage extends Component {
   render() {
     return (
       <ScrollView>
-        <DeviceList />
+        <DeviceList navigation={this.props.navigation} />
       </ScrollView>
     );
   }
