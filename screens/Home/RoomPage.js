@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, ScrollView, Text} from 'react-native';
+import {ScrollView} from 'react-native';
 import DeviceList from '../../components/Device/DevicesList';
 
 export default class RoomPage extends Component {
@@ -11,5 +11,3 @@ export default class RoomPage extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({});
