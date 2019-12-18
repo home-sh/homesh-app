@@ -4,6 +4,9 @@ import RoomButton from './RoomButton';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class RoomList extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <View>
@@ -13,16 +16,16 @@ export default class RoomList extends Component {
         </View>
         <View style={styles.salleContainer}>
           <View style={styles.salleFlex}>
-            <RoomButton />
-            <RoomButton />
+            <RoomButton navigation={this.props.navigation} />
+            <RoomButton navigation={this.props.navigation} />
           </View>
           <View style={styles.salleFlex}>
-            <RoomButton />
-            <RoomButton />
+            <RoomButton navigation={this.props.navigation} />
+            <RoomButton navigation={this.props.navigation} />
           </View>
           <View style={styles.salleFlex}>
-            <RoomButton />
-            <RoomButton />
+            <RoomButton navigation={this.props.navigation} />
+            <RoomButton navigation={this.props.navigation} />
           </View>
         </View>
       </View>

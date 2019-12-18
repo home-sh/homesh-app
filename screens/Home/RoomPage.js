@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {StyleSheet, ScrollView, Text} from 'react-native';
+import DeviceList from '../../components/Device/DevicesList';
 
 export default class RoomPage extends Component {
   render() {
     return (
-      <View>
-        <Text> Room </Text>
-      </View>
+      <ScrollView>
+        <DeviceList />
+      </ScrollView>
     );
   }
 }
+
+const styles = StyleSheet.create({});

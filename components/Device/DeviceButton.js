@@ -9,12 +9,8 @@ export default class DeviceButton extends Component {
 
 const styles = StyleSheet.create({
   favorisSquare: {
-    marginTop: 30,
-    marginBottom: 40,
-    marginRight: 10,
-    marginLeft: 8,
-    width: 75,
-    height: 75,
+    width: '100%',
+    height: '100%',
     backgroundColor: 'grey',
   },
 });

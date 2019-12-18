@@ -8,16 +8,27 @@ export default class FavoritesList extends Component {
       <View>
         <Text style={styles.Text}> Favoris </Text>
         <ScrollView horizontal style={styles.favorisFlex}>
-          <DeviceButton />
-          <DeviceButton />
-          <DeviceButton />
-          <DeviceButton />
-          <DeviceButton />
-          <DeviceButton />
-          <DeviceButton />
-          <DeviceButton />
-          <DeviceButton />
-          <DeviceButton />
+          <View style={styles.viewStyle}>
+            <DeviceButton />
+          </View>
+          <View style={styles.viewStyle}>
+            <DeviceButton />
+          </View>
+          <View style={styles.viewStyle}>
+            <DeviceButton />
+          </View>
+          <View style={styles.viewStyle}>
+            <DeviceButton />
+          </View>
+          <View style={styles.viewStyle}>
+            <DeviceButton />
+          </View>
+          <View style={styles.viewStyle}>
+            <DeviceButton />
+          </View>
+          <View style={styles.viewStyle}>
+            <DeviceButton />
+          </View>
         </ScrollView>
       </View>
     );
@@ -33,5 +44,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginLeft: 20,
     marginRight: 20,
+  },
+  viewStyle: {
+    marginTop: 30,
+    marginBottom: 40,
+    width: 75,
+    height: 75,
+    marginRight: 30,
   },
 });

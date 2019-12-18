@@ -1,9 +1,18 @@
 import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {Text, StyleSheet, TouchableHighlight} from 'react-native';
 
 export default class RoomButton extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
-    return <View style={styles.salleSquare} />;
+    return (
+      <TouchableHighlight
+        style={styles.salleSquare}
+        onPress={() => this.props.navigation.navigate('Room')}>
+        <Text>Room</Text>
+      </TouchableHighlight>
+    );
   }
 }
 
