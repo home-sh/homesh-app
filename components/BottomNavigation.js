@@ -4,9 +4,9 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
-import Home from './../screens/Home';
-import Room from './../screens/Room';
-import Device from './../screens/Device';
+import Home from './../screens/Home/HomePage';
+import Room from './../screens/Home/RoomPage';
+import Device from './../screens/Home/DevicePage';
 import Statistics from './../screens/Statistics';
 import Settings from './../screens/Settings';
 
