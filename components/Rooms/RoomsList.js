@@ -40,7 +40,9 @@ const styles = StyleSheet.create({
   },
   TextSalle: {
     flex: 1,
-    marginLeft: 40,
+    marginLeft: 20,
+    fontWeight: '600',
+    fontSize: 45,
     alignItems: 'flex-start',
     fontFamily: 'LexendDeca-Regular',
   },
