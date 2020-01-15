@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import BottomNavigation from './components/BottomNavigation';
+import Navigation from './components/Navigation';
 
 export default class App extends Component {
   render() {
-    return <BottomNavigation />;
+    return <Navigation />;
   }
 }
