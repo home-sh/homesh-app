@@ -39,6 +39,9 @@ const styles = StyleSheet.create({
     shadowRadius: 7.49,
     elevation: 12,
     justifyContent: 'space-between',
+    paddingBottom: 5,
+    paddingRight: 5,
+    paddingLeft: 5,
   },
   RoomText: {
     fontSize: 20,
