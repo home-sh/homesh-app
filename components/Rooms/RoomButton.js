@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Text, StyleSheet, TouchableNativeFeedback, View} from 'react-native';
 import RoomDeviceList from './RoomDeviceList';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 export default class RoomButton extends Component {
   constructor(props) {
     super(props);
@@ -10,10 +12,9 @@ export default class RoomButton extends Component {
       <TouchableNativeFeedback
         onPress={() => this.props.navigation.navigate('Room')}>
         <View style={styles.salleSquare}>
+          <Icon style={{textAlign: 'right'}} name="record" size={25} />
           <Text style={styles.RoomText}>Room</Text>
-          <View style={{position: 'absolute', bottom: 5, width: '100%'}}>
-            <RoomDeviceList navigation={this.props.navigation} />
-          </View>
+          <RoomDeviceList navigation={this.props.navigation} />
         </View>
       </TouchableNativeFeedback>
     );
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.37,
     shadowRadius: 7.49,
     elevation: 12,
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
   RoomText: {
     fontSize: 20,
