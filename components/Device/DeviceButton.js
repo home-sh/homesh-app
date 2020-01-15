@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {TouchableHighlight, StyleSheet, Text} from 'react-native';
+import React, { Component } from 'react';
+import { TouchableHighlight, StyleSheet, Text } from 'react-native';
 
 export default class DeviceButton extends Component {
   render() {
@@ -17,6 +17,16 @@ const styles = StyleSheet.create({
   favorisSquare: {
     width: '100%',
     height: '100%',
-    backgroundColor: 'grey',
+    backgroundColor: 'white',
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+
+    elevation: 12,
   },
 });
