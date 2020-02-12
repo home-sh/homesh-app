@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {
+  SafeAreaView,
+  View,
   Text,
   KeyboardAvoidingView,
   StyleSheet,
@@ -29,29 +31,36 @@ export default class Signup extends Component {
   render() {
     let {email, password} = this.state;
     return (
-      <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
-        <Image
-          style={styles.logo}
-          source={require('../assets/images/homesh-icon.png')}
-        />
-        <Text style={styles.title}>Inscription</Text>
-        <LabeledInput
-          label="Email"
-          onChangeText={text => this.onChangeEmail(text)}
-          value={email}
-        />
-        <LabeledInput
-          label="Mot de passe"
-          onChangeText={text => this.onChangePassword(text)}
-          value={password}
-        />
-        <Button title="S'inscrire" />
-      </KeyboardAvoidingView>
+      <SafeAreaView style={styles.fullscreen}>
+        <KeyboardAvoidingView style={styles.fullscreen} behavior="height">
+          <View style={styles.container}>
+            <Image
+              style={styles.logo}
+              source={require('../assets/images/homesh-icon.png')}
+            />
+            <Text style={styles.title}>Connexion</Text>
+            <LabeledInput
+              label="Email"
+              onChangeText={text => this.onChangeEmail(text)}
+              value={email}
+            />
+            <LabeledInput
+              label="Mot de passe"
+              onChangeText={text => this.onChangePassword(text)}
+              value={password}
+            />
+            <Button title="Se Connecter" />
+          </View>
+        </KeyboardAvoidingView>
+      </SafeAreaView>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  fullscreen: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     flexDirection: 'column',
