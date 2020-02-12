@@ -11,7 +11,7 @@ export default class DeviceButton extends Component {
         onPress={() => this.props.navigation.navigate('Device')}>
 
         <View style={styles.favorisSquare}>
-          <Icon name="tv" size={50} style={styles.icon} />
+          <Icon name="tv" size={this.props.iconSize} style={styles.icon} />
           <Text style={styles.text}>Device</Text>
           <View>{this.props.showRoomName ? roomName : null}</View>
         </View>

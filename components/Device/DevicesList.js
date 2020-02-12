@@ -16,7 +16,8 @@ export default class DeviceList extends Component {
         <View style={styles.viewStyle} key={i}>
           <DeviceButton
             navigation={this.props.navigation}
-            showRoomName={true}
+            showRoomName={false}
+            iconSize={70}
           />
         </View>
       )
