@@ -10,7 +10,7 @@ export default class RoomButton extends Component {
       <TouchableHighlight
         style={styles.salleSquare}
         onPress={() => this.props.navigation.navigate('Room')}>
-        <Text>Room</Text>
+        <Text style={styles.RoomText}>Room</Text>
       </TouchableHighlight>
     );
   }
@@ -23,6 +23,19 @@ const styles = StyleSheet.create({
     height: 130,
     marginRight: 25,
     marginLeft: 25,
-    backgroundColor: 'grey',
+    backgroundColor: '#FFF',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.37,
+    shadowRadius: 7.49,
+    elevation: 12,
+  },
+  RoomText: {
+    fontFamily: 'LexendDeca-Regular',
+    textAlign: 'center',
   },
 });

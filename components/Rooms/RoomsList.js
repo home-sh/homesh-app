@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginLeft: 40,
     alignItems: 'flex-start',
+    fontFamily: 'LexendDeca-Regular',
   },
   icon: {
     marginRight: 40,
