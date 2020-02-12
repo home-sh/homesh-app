@@ -10,7 +10,7 @@ import Device from '../screens/Home/DevicePage';
 import Statistics from '../screens/Statistics';
 import Settings from '../screens/Settings';
 import Signin from '../screens/Signin';
-import Signup from '../screens/Signup';
+import Register from '../screens/Register';
 import Loading from '../screens/Loading';
 
 const HomeStack = createStackNavigator({
@@ -61,7 +61,7 @@ const Navigation = createAppContainer(
     {
       App: BottomNavigation,
       Signin,
-      Signup,
+      Register,
       Loading,
     },
     {
