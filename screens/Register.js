@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Image,
   Button,
+  Platform,
 } from 'react-native';
 import firebase from 'firebase';
 import LabeledInput from '../components/LabeledInput';
@@ -24,7 +25,10 @@ export default class Register extends Component {
   render() {
     return (
       <SafeAreaView style={styles.fullscreen}>
-        <KeyboardAvoidingView style={styles.fullscreen} behavior="height">
+        <KeyboardAvoidingView
+          keyboardVerticalOffset={Platform.select({ios: 0, android: -50})}
+          style={styles.fullscreen}
+          behavior="padding">
           <View style={styles.container}>
             <Image
               style={styles.logo}
