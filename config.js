@@ -1,4 +1,5 @@
 import * as firebase from 'firebase';
+import '@firebase/firestore';
 
 let config = {
   projectId: 'home-sh',
@@ -8,5 +9,8 @@ let config = {
   storageBucket: 'home-sh.appspot.com',
 };
 
-let app = firebase.initializeApp(config);
-export const db = app.database();
+firebase.initializeApp(config);
+
+const db = firebase.firestore();
+
+export default db;
