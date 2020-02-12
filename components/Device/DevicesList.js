@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, StyleSheet, ScrollView, Text} from 'react-native';
+import React, { Component } from 'react';
+import { View, StyleSheet, ScrollView, Text } from 'react-native';
 import DeviceButton from '../Device/DeviceButton';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -8,6 +8,7 @@ export default class DeviceList extends Component {
     super(props);
   }
   render() {
+
     return (
       <ScrollView>
         <Text style={styles.salleText}>Salle</Text>
@@ -15,39 +16,28 @@ export default class DeviceList extends Component {
           <Text style={styles.TextDevice}> Appareil </Text>
           <Icon name="plus-circle" size={30} style={styles.icon} />
         </View>
-        <View style={styles.deviceContainer}>
-          <View style={styles.deviceFlex}>
-            <View style={styles.viewStyle}>
-              <DeviceButton navigation={this.props.navigation} />
-            </View>
-            <View style={styles.viewStyle}>
-              <DeviceButton navigation={this.props.navigation} />
-            </View>
+        <View style={styles.devicesContainer}>
+          <View style={styles.viewStyle}>
+            <DeviceButton
+              navigation={this.props.navigation}
+              showRoomName={false}
+            />
           </View>
-          <View style={styles.deviceFlex}>
-            <View style={styles.viewStyle}>
-              <DeviceButton navigation={this.props.navigation} />
-            </View>
-            <View style={styles.viewStyle}>
-              <DeviceButton navigation={this.props.navigation} />
-            </View>
+
+          <View style={styles.viewStyle}>
+            <DeviceButton
+              navigation={this.props.navigation}
+              showRoomName={false}
+            />
           </View>
-          <View style={styles.deviceFlex}>
-            <View style={styles.viewStyle}>
-              <DeviceButton navigation={this.props.navigation} />
-            </View>
-            <View style={styles.viewStyle}>
-              <DeviceButton navigation={this.props.navigation} />
-            </View>
+
+          <View style={styles.viewStyle}>
+            <DeviceButton
+              navigation={this.props.navigation}
+              showRoomName={false}
+            />
           </View>
-          <View style={styles.deviceFlex}>
-            <View style={styles.viewStyle}>
-              <DeviceButton navigation={this.props.navigation} />
-            </View>
-            <View style={styles.viewStyle}>
-              <DeviceButton navigation={this.props.navigation} />
-            </View>
-          </View>
+
         </View>
       </ScrollView>
     );
@@ -55,15 +45,12 @@ export default class DeviceList extends Component {
 }
 
 const styles = StyleSheet.create({
-  deviceContainer: {
+  devicesContainer: {
     marginTop: 25,
     marginBottom: 25,
-  },
-  deviceFlex: {
-    flex: 1,
+    display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexWrap:'wrap'
   },
   viewStyle: {
     width: 140,
