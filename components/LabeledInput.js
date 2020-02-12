@@ -2,12 +2,20 @@ import React, {Component} from 'react';
 import {Text, View, TextInput, StyleSheet} from 'react-native';
 
 export default class LabeledInput extends Component {
+  onChangeText(text) {
+    this.props.onChangeText(text);
+  }
+
   render() {
     const {label, ...props} = this.props;
     return (
       <View style={styles.container}>
         <Text style={styles.label}> {label || 'Label'} </Text>
-        <TextInput style={styles.input} {...props}></TextInput>
+        <TextInput
+          style={styles.input}
+          {...props}
+          onChangeText={text => this.onChangeText(text)}
+        />
       </View>
     );
   }

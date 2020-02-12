@@ -10,8 +10,8 @@ import Device from '../screens/Home/DevicePage';
 import Statistics from '../screens/Statistics';
 import Settings from '../screens/Settings';
 import Signin from '../screens/Signin';
-
-const AuthStack = createStackNavigator({Signin});
+import Signup from '../screens/Signup';
+import Loading from '../screens/Loading';
 
 const HomeStack = createStackNavigator({
   Home,
@@ -39,14 +39,13 @@ const BottomNavigation = createBottomTabNavigator(
         const {routeName} = navigation.state;
         let iconName;
         if (routeName === 'Home') {
-          iconName = `ios-home`;
+          iconName = 'ios-home';
         } else if (routeName === 'Statistics') {
-          iconName = `ios-analytics`;
+          iconName = 'ios-analytics';
         } else if (routeName === 'Settings') {
-          iconName = `ios-options`;
+          iconName = 'ios-options';
         }
 
-        // You can return any component that you like here!
         return <Icon name={iconName} size={25} color={tintColor} />;
       },
     }),
@@ -61,10 +60,12 @@ const Navigation = createAppContainer(
   createSwitchNavigator(
     {
       App: BottomNavigation,
-      Auth: AuthStack,
+      Signin,
+      Signup,
+      Loading,
     },
     {
-      initialRouteName: 'Auth',
+      initialRouteName: 'Loading',
     },
   ),
 );

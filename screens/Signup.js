@@ -1,12 +1,70 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {
+  Text,
+  KeyboardAvoidingView,
+  StyleSheet,
+  Image,
+  Button,
+} from 'react-native';
+import LabeledInput from '../components/LabeledInput';
 
-export default class Register extends Component {
+export default class Signup extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      email: '',
+      password: '',
+    };
+  }
+
+  onChangeEmail(email) {
+    this.setState({email});
+  }
+
+  onChangePassword(password) {
+    this.setState({password});
+  }
+
   render() {
+    let {email, password} = this.state;
     return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
+      <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
+        <Image
+          style={styles.logo}
+          source={require('../assets/images/homesh-icon.png')}
+        />
+        <Text style={styles.title}>Inscription</Text>
+        <LabeledInput
+          label="Email"
+          onChangeText={text => this.onChangeEmail(text)}
+          value={email}
+        />
+        <LabeledInput
+          label="Mot de passe"
+          onChangeText={text => this.onChangePassword(text)}
+          value={password}
+        />
+        <Button title="S'inscrire" />
+      </KeyboardAvoidingView>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+  },
+  logo: {
+    width: 150,
+    height: 150,
+  },
+  title: {
+    fontSize: 40,
+    marginBottom: 10,
+    fontWeight: '700',
+  },
+});

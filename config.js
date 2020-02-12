@@ -1,6 +1,3 @@
-import * as firebase from 'firebase';
-import '@firebase/firestore';
-
 let config = {
   projectId: 'home-sh',
   apiKey: 'AIzaSyBg5O-7dydqQrqYa4j-bTneWCmbc3sXWHU',
@@ -9,8 +6,4 @@ let config = {
   storageBucket: 'home-sh.appspot.com',
 };
 
-firebase.initializeApp(config);
-
-const db = firebase.firestore();
-
-export default db;
+export default config;
