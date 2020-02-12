@@ -8,7 +8,19 @@ export default class DeviceList extends Component {
     super(props);
   }
   render() {
+    var payments = [];
 
+    for (let i = 0; i < 10; i++) {
+
+      payments.push(
+        <View style={styles.viewStyle} key={i}>
+          <DeviceButton
+            navigation={this.props.navigation}
+            showRoomName={true}
+          />
+        </View>
+      )
+    }
     return (
       <ScrollView>
         <Text style={styles.salleText}>Salle</Text>
@@ -16,29 +28,7 @@ export default class DeviceList extends Component {
           <Text style={styles.TextDevice}> Appareil </Text>
           <Icon name="plus-circle" size={30} style={styles.icon} />
         </View>
-        <View style={styles.devicesContainer}>
-          <View style={styles.viewStyle}>
-            <DeviceButton
-              navigation={this.props.navigation}
-              showRoomName={false}
-            />
-          </View>
-
-          <View style={styles.viewStyle}>
-            <DeviceButton
-              navigation={this.props.navigation}
-              showRoomName={false}
-            />
-          </View>
-
-          <View style={styles.viewStyle}>
-            <DeviceButton
-              navigation={this.props.navigation}
-              showRoomName={false}
-            />
-          </View>
-
-        </View>
+        <View style={styles.devicesContainer}>{payments}</View>
       </ScrollView>
     );
   }
@@ -50,7 +40,7 @@ const styles = StyleSheet.create({
     marginBottom: 25,
     display: 'flex',
     flexDirection: 'row',
-    flexWrap:'wrap'
+    flexWrap: 'wrap'
   },
   viewStyle: {
     width: 140,
