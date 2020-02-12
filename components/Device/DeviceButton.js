@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
-import { TouchableHighlight, StyleSheet, Text } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { TouchableNativeFeedback, StyleSheet, Text, View } from 'react-native';
 
 export default class DeviceButton extends Component {
+
   render() {
+    const roomName = <Text> Room </Text>;
     return (
-      <TouchableHighlight
-        style={styles.favorisSquare}
+      <TouchableNativeFeedback
         onPress={() => this.props.navigation.navigate('Device')}>
-        <Text>Device</Text>
-      </TouchableHighlight>
+
+        <View style={styles.favorisSquare}>
+          <Icon name="tv" size={50} style={styles.icon} />
+          <Text style={styles.text}>Device</Text>
+          <View>{this.props.showRoomName ? roomName : null}</View>
+        </View>
+
+      </TouchableNativeFeedback>
     );
   }
 }
@@ -17,6 +25,10 @@ const styles = StyleSheet.create({
   favorisSquare: {
     width: '100%',
     height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: 'white',
     borderRadius: 10,
     shadowColor: "#000",
@@ -29,4 +41,8 @@ const styles = StyleSheet.create({
 
     elevation: 12,
   },
+  text: {
+    fontFamily: 'LexendDeca-Regular',
+    fontSize: 20,
+  }
 });
