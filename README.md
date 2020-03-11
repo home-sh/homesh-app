@@ -2,11 +2,13 @@
 
 Tout d'abord, merci de vous intéresser à ce projet !
 
-HomeSH est un projet ayant pour but de démocratiser l'utilisation des objets connectés chez les particuliers. Pour cela nous proposons une application mobile de getion domotique.
+HomeSH est un projet ayant pour but de démocratiser l'utilisation des objets connectés chez les particuliers. Pour cela nous proposons en premier lieu une application mobile de gestion domotique.
 
-Car nous avons remarqué qu’il était étouffant pour l’utilisateur de devoir utiliser une appli dédiée pour chaque objet connecté. Par exemple l’application Philips pour les ampoules, l’application Nest pour le thermostat, ou l’application Tp-link pour les prises connectées. 
+Car nous avons remarqué qu’il était étouffant pour l’utilisateur de devoir utiliser une appli dédiée pour chaque objet connecté. Par exemple l’application Philips pour les ampoules, l’application Nest pour le thermostat ou l’application Tp-link pour les prises connectées. 
 
-Il y a donc un besoin de centraliser sur une même interface l’ensemble des objets de la maison afin d’interagir plus facilement avec ceux-ci. 
+Il y a donc un besoin de centraliser sur une même interface l’ensemble des objets de la maison pour interagir plus facilement avec ceux-ci. 
+
+Lorsque le projet sera un peu plus abouti, nous in
 
 Nous répondons de plus à un manque d’éthique des acteurs déjà en place en proposant une plateforme open-source garantissant la sécurité des données personnelles, des objets et de l’usager. 
 
@@ -157,7 +159,7 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MDYzNTU3MSw2ODQyMzgzNDMsMjQyNj
+eyJoaXN0b3J5IjpbMTgzNzcxMDQ0OSw2ODQyMzgzNDMsMjQyNj
 g5NDkyLC00NDY0MjUwNiwtNzY1MzYyNjQ3LC0xOTk4MzQ5MjQ2
 LDE1NTM2MTAwNTgsLTMzMjQ1NTM2M119
 -->
