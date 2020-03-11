@@ -18,6 +18,7 @@ Nous répondons aussi à un manque d’éthique des acteurs déjà en place. Nou
 
 HomeSH est un projet réalisé dans le cadre de nos études au sein de l’école YNOV Nantes. Il s'agit d'un projet rassemblant plusieurs métiers différents désirant apprendre et monter en compétence. 
 
+
 ## Les membres de l'équipe
 
 Notre équipe est actuellement composé de 6 membres.  
@@ -26,3 +27,44 @@ Nous avons aussi notre admin système qui s'occupe de la partie IOT et de la par
 
 Et vous, serez-vous bientôt membre de l'équipe ?
 Si vous êtes intéressé par ce projet, n'hésitez pas à contribuer au code ou à proposer de nouvelles fonctionnalités !
+
+
+## Quand est-ce que nous avons travaillé le projet ?
+Le projet a débuté en septembre 2019 et se finira en Juillet 2020.
+Nous espérons grandement rempiler ce projet de setembre 2020 à juillet 2022 !
+
+
+## A quoi ressemble votre application ?
+(screenshots)
+
+
+## Progression HomeSH
+
+=== loading in progress ! ===
+
+Le projet est actuellement en cours de réalisation, nous ne manqueront pas de vous tenir informé du projet !
+
+
+## Les technos utilisées
+
+Nous avons choisis d'utiliser React Native et FireBase en technologies de développement. 
+
+
+## Comment on l'installe ?
+
+Installez les dépendances avec :
+```
+npm install
+```
+
+Puis lancer les modules avec 
+```
+npm run android
+```
+ou
+```
+npm run ios
+```
+
+
+Au plaisir de te retrouver bientôt !
