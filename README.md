@@ -24,6 +24,7 @@ Notre équipe est actuellement composé de 6 membres.  Tout d'abord, il y a Vale
 Nous avons aussi notre admin système qui s'occupe de la partie IOT et de la partie réseau du projet (Protocole réseau domotique, sécurité des données etc.). Enfin nous avons notre chargé de communication Jean-Baptiste Maréchal, qui s'occupe de toute la partie marketing et communication du projet.
 
 Et bientôt vous !
+
 Si vous êtes intérésé par ce projet, n'hésitez pas à contribuer au code !
 
 
@@ -158,7 +159,7 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMzk0OTExNywxODM3NzEwNDQ5LDY4ND
-IzODM0MywyNDI2ODk0OTIsLTQ0NjQyNTA2LC03NjUzNjI2NDcs
-LTE5OTgzNDkyNDYsMTU1MzYxMDA1OCwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTEwMTEzNTg4OTEsMTgzNzcxMDQ0OSw2OD
+QyMzgzNDMsMjQyNjg5NDkyLC00NDY0MjUwNiwtNzY1MzYyNjQ3
+LC0xOTk4MzQ5MjQ2LDE1NTM2MTAwNTgsLTMzMjQ1NTM2M119
 -->
