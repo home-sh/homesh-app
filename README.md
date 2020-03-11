@@ -1,6 +1,6 @@
 # Bienvenue sur le projet HomeSH !
 
-HomeSH est un projet ayant pour but de démocratiser l'utilisation des objets connectés chez les particuliers. Pour cela nous proposons une application mobile de gestion domotique.
+HomeSH est un projet ayant pour but de démocratiser l'utilisation des objets connectés chez les particuliers. Pour cela nous proposons une application mobile de getion domotique.
 
 Car nous avons remarqué qu’il était étouffant pour l’utilisateur de devoir utiliser une appli dédiée pour chaque objet connecté. Par exemple l’application Philips pour les ampoules, l’application Nest pour le thermostat, ou l’application Tp-link pour les prises connectées. 
 
@@ -16,7 +16,7 @@ HomeSH est un projet réalisé dans le cadre de nos études. Il s'agit d'un proj
 
 ## Les membres de l'équipe
 
-Notre équipe est de 6 membres.  Tout d'abord, il y a Valentin GUIBERT, chef et coordinateur du projet. Il s'occupe essentiellement de la gestion de notre équipe et vérifie que tout le monde avance.
+Notre équipe eslement de 6 membres.  Tout d'abord, il y a Valentin GUIBERT, chef et coordinateur du projet. Il s'occupe essentielt de la gestion de notre équipe et vérifie que tout le monde avance.
 Cependant, il développe aussi avec les trois autres développeurs. Nous avons Elouan LAFRECHOUX, Marceau DAVID, Abdelhamid NEJI. Les trois sont des développeurs full-stack.
 Nous avons aussi notre admin système qui s'occupe de la partie IOT et de la partie réseau du projet (Protocole réseau domotique, sécurité des données etc.). Enfin nous avons notre chargé de communication Jean-Baptiste Maréchal, qui s'occupe de toute la partie marketing et communication du projet.
 
@@ -151,7 +151,7 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQyNjg5NDkyLC00NDY0MjUwNiwtNzY1Mz
-YyNjQ3LC0xOTk4MzQ5MjQ2LDE1NTM2MTAwNTgsLTMzMjQ1NTM2
-M119
+eyJoaXN0b3J5IjpbNjg0MjM4MzQzLDI0MjY4OTQ5MiwtNDQ2ND
+I1MDYsLTc2NTM2MjY0NywtMTk5ODM0OTI0NiwxNTUzNjEwMDU4
+LC0zMzI0NTUzNjNdfQ==
 -->
