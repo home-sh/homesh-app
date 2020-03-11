@@ -1,4 +1,99 @@
-# Bienvenue sur le projet HomeSH !
+[> English version here](###-EN-:)
+[> Version française ici](###-FR-:)
+
+
+### EN :
+
+# Table of contents
+1. [Welcome to the HomeSH project](#Welcome-to-the-HomeSH-project)
+2. [Project display](#project-display)
+	1. [Team members](##Team-members)
+	2. [When did we work on the project?](##When-did-we-work-on-the-project?)
+	3. [What the application looks like ?](##what-the-application-looks-like-?)
+	4. [HomeSH project progress](##HomeSH-project-progress)
+	5. [Technologies used](##Technologies-used)
+	6. [How does it settle ?](##How-does-it-settle-?)
+
+
+# Welcome to the HomeSH project
+
+First of all, thank you for your interest in this project!
+
+HomeSH is a project aimed at democratizing the use of connected objects. We offer a mobile application to home automation management .
+
+We noticed it was stuffy for the user to use a dedicated app for each connected object. For example, the Philips app for light bulbs, the Nest app for the thermostat or the Tp-link app for connected outlets.
+
+There is a need to centralize all the connected objects in the house on a single interface in order to interact more easily with them.
+
+When the project will be a little more successful, we will integrate a daily life assistant to set up different routines.
+A routine is to wake up gently with your favorite music and a lamp gradually increasing the brightness. After 10 minutes, gradually open the shutters if you wish? But the best part will be the hot coffee waiting for you in your kitchen !
+
+We are also responding to a lack of ethics on the part of the players already in place. We protect and respect your data by offering an open-source platform.
+
+# Project display
+HomeSH is a project carried out as part of our studies at the YNOV Nantes school. It's a project bringing together several different trades wishing to learn and develop skills.
+
+## Team members
+Our team is currently composed of 6 members.
+Valentin GUIBERT is the project leader and coordinator. He developed the application and the website with the three other developers: Elouan LAFRECHOUX, Marceau DAVID and Abdelhamid NEJI. All four are full-stack developers.
+We also have our system admin which takes care of the IOT part and the network part (Home automation network protocol, data security etc.). Finally, a communication officer, Jean-Baptiste MARECHAL, takes care of the marketing and communication aspects of the project.
+
+And you, will you soon be a member of the team?
+If you are interested in this project, do not hesitate to contribute to the code or to propose new functionalities !
+
+## When did we work on the project ?
+The project started in September 2019 and will end in July 2020.
+We really hope to re-stack this project from September 2020 to July 2022!
+
+## What the application looks like ?
+(screenshots)
+
+## HomeSH project progress
+=== loading in progress! ===
+
+The project is currently underway, we will keep you informed of the project!
+
+## Technologies used
+We have chosen to use React Native and FireBase on development technologies.
+
+## How does it settle ?
+Install dependencies with:
+
+    npm install
+
+
+Then launch the modules with
+
+    npm run android
+
+or
+
+    npm run ios
+
+
+
+We look forward to seeing you soon!
+
+
+
+#### //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+### FR :
+
+# Sommaire 
+
+1. [Bienvenue sur le projet HomeSH](#Bienvenue-sur-le-projet-HomeSH)
+2. [Présentation du projet](#Présentation-du-projet)
+	1. [Les membres de l'équipe](##Les-membres-de-l'équipe)
+	2. [Quand est-ce que nous avons travaillé le projet ?](##Quand-est-ce-que-nous-avons-travaillé-le-projet-?)
+	3. [À quoi ressemble votre application ?](##À-quoi-ressemble-votre-application-?)
+	4. [Progression du projet HomeSH](##Progression-du-projet-HomeSH)
+	5. [Les technos utilisées](##Les-technos-utilisées)
+	6. [Comment on l'installe ?](##Comment-on-l'installe-?)
+
+
+# Bienvenue sur le projet HomeSH
 
 Tout d'abord, merci de vous intéresser à ce projet !
 
@@ -34,11 +129,11 @@ Le projet a débuté en septembre 2019 et se finira en Juillet 2020.
 Nous espérons grandement rempiler ce projet de setembre 2020 à juillet 2022 !
 
 
-## A quoi ressemble votre application ?
+## À quoi ressemble votre application ?
 (screenshots)
 
 
-## Progression HomeSH
+## Progression du projet HomeSH
 
 === loading in progress ! ===
 
@@ -57,7 +152,7 @@ Installez les dépendances avec :
 npm install
 ```
 
-Puis lancer les modules avec 
+Puis lancez les modules avec 
 ```
 npm run android
 ```
@@ -68,3 +163,4 @@ npm run ios
 
 
 Au plaisir de te retrouver bientôt !
+
