@@ -10,7 +10,7 @@ HomeSH est un projet réalisé dans le cadre de nos études. Il s'agit d'un proj
 
 ## Les membres de l'équipe
 
-Nous sommes composé actuellement de 6 membres.  Tout d'abord, il y a Valentin GUIBERT, chef et coordinateur du projet. Il s'occupe essentiellement de la gestion de notre équipe et vérifie que tout le mo
+Nous sommes composé actuellement de 6 membres.  Tout d'abord, il y a Valentin GUIBERT, chef et coordinateur du projet. Il s'occupe essentiellement de la gestion de notre équipe et vérifie que tout le monde avance. Cependant, il développe aussi avec les trois autres développeurs. Nous avons Elouan LAFRECHOUX, Marceau DAVID, Abdelhamid NEJI. Les trois sont des développeurs full-stack et 
 
 ## Switch to another file
 
@@ -143,6 +143,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM3NzI1NTM3LDE1NTM2MTAwNTgsLTMzMj
-Q1NTM2M119
+eyJoaXN0b3J5IjpbLTE2MDAxMzQ2NzIsMTU1MzYxMDA1OCwtMz
+MyNDU1MzYzXX0=
 -->
