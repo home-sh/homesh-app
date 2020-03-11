@@ -37,11 +37,16 @@ export default class Signin extends Component {
             <Text style={styles.title}>Connexion</Text>
             <LabeledInput
               label="Email"
+              textContentType="emailAddress"
+              autoCapitalize="none"
               onChangeText={email => this.setState({email})}
               value={this.state.email}
             />
             <LabeledInput
               label="Mot de passe"
+              textContentType="password"
+              autoCapitalize="none"
+              secureTextEntry={true}
               onChangeText={password => this.setState({password})}
               value={this.state.password}
             />

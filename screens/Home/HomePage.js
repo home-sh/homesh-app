@@ -8,7 +8,6 @@ export default class HomePage extends Component {
     super(props);
   }
   render() {
-    console.log(this.props.navigation);
     return (
       <ScrollView style={styles.mainContainer}>
         <FavoritesList navigation={this.props.navigation} />
