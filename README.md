@@ -1,18 +1,18 @@
-[> English version here](###-EN-:)
-[> Version française ici](###-FR-:)
+[> English version here](#en-)
+[> Version française ici](#fr-)
 
 
 ### EN :
 
 # Table of contents
-1. [Welcome to the HomeSH project](#Welcome-to-the-HomeSH-project)
+1. [Welcome to the HomeSH project](#welcome-to-the-homesh-project)
 2. [Project display](#project-display)
-	1. [Team members](##Team-members)
-	2. [When did we work on the project?](##When-did-we-work-on-the-project?)
-	3. [What the application looks like ?](##what-the-application-looks-like-?)
-	4. [HomeSH project progress](##HomeSH-project-progress)
-	5. [Technologies used](##Technologies-used)
-	6. [How does it settle ?](##How-does-it-settle-?)
+	1. [Team members](#team-members)
+	2. [When did we work on the project?](#when-did-we-work-on-the-project-)
+	3. [What the application looks like ?](#what-the-application-looks-like-)
+	4. [HomeSH project progress](#homesh-project-progress)
+	5. [Technologies used](#technologies-used)
+	6. [How does it settle ?](#how-does-it-settle-)
 
 
 # Welcome to the HomeSH project
@@ -76,21 +76,21 @@ We look forward to seeing you soon!
 
 
 
-#### //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#### //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 ### FR :
 
 # Sommaire 
 
-1. [Bienvenue sur le projet HomeSH](#Bienvenue-sur-le-projet-HomeSH)
-2. [Présentation du projet](#Présentation-du-projet)
-	1. [Les membres de l'équipe](##Les-membres-de-l'équipe)
-	2. [Quand est-ce que nous avons travaillé le projet ?](##Quand-est-ce-que-nous-avons-travaillé-le-projet-?)
-	3. [À quoi ressemble votre application ?](##À-quoi-ressemble-votre-application-?)
-	4. [Progression du projet HomeSH](##Progression-du-projet-HomeSH)
-	5. [Les technos utilisées](##Les-technos-utilisées)
-	6. [Comment on l'installe ?](##Comment-on-l'installe-?)
+1. [Bienvenue sur le projet HomeSH](#bienvenue-sur-le-projet-homesh)
+2. [Présentation du projet](#pr%C3%A9sentation-du-projet)
+	1. [Les membres de l'équipe](#les-membres-de-l%C3%A9quipe)
+	2. [Quand est-ce que nous avons travaillé le projet ?](#quand-est-ce-que-nous-avons-travaill%C3%A9-le-projet-)
+	3. [À quoi ressemble votre application ?](#%C3%A0-quoi-ressemble-votre-application-)
+	4. [Progression du projet HomeSH](#progression-du-projet-homesh)
+	5. [Les technos utilisées](#les-technos-utilis%C3%A9es)
+	6. [Comment on l'installe ?](#comment-on-linstalle-)
 
 
 # Bienvenue sur le projet HomeSH
