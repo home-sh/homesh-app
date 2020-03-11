@@ -14,8 +14,11 @@ export default class RoomButton extends Component {
         onPress={() => this.props.navigation.navigate('Room')}>
         <View style={styles.salleSquare}>
           <Icon style={{textAlign: 'right'}} name="record" size={25} />
-          <Text style={styles.RoomText}>Room</Text>
-          <RoomDeviceList navigation={this.props.navigation} />
+          <Text style={styles.RoomText}>{this.props.room.name || 'Room'}</Text>
+          <RoomDeviceList
+            devices={this.props.room.devices}
+            navigation={this.props.navigation}
+          />
         </View>
       </TouchableHighlight>
     );
@@ -28,8 +31,6 @@ const styles = StyleSheet.create({
     marginTop: 30,
     height: 130,
     width: 130,
-    marginRight: 25,
-    marginLeft: 25,
     backgroundColor: '#FFF',
     borderRadius: 10,
     shadowColor: '#000',

@@ -37,13 +37,11 @@ export default class FavoritesList extends Component {
 
 const styles = StyleSheet.create({
   Text: {
-    marginLeft: 40,
+    marginHorizontal: '10%',
   },
   favorisFlex: {
-    flex: 1,
+    marginHorizontal: '10%',
     flexDirection: 'row',
-    marginLeft: 20,
-    marginRight: 20,
   },
   viewStyle: {
     marginTop: 30,

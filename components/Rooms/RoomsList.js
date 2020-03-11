@@ -7,26 +7,58 @@ export default class RoomList extends Component {
   constructor(props) {
     super(props);
   }
+
+  rooms = [
+    {
+      name: 'Chambre',
+      devices: [
+        {icon: 'lightbulb'},
+        {icon: 'lamp'},
+        {icon: 'television'},
+        {icon: 'alarm'},
+      ],
+    },
+    {
+      name: 'Salle de bain',
+      devices: [{icon: 'lightbulb'}],
+    },
+    {
+      name: 'Salon',
+      devices: [
+        {icon: 'lightbulb'},
+        {icon: 'television'},
+        {icon: 'laptop'},
+        {icon: 'desktop-classic'},
+        {icon: 'radio'},
+      ],
+    },
+    {
+      name: 'Bureau',
+      devices: [{icon: 'lightbulb'}, {icon: 'desk-lamp'}],
+    },
+    {
+      name: 'Salle à manger',
+      devices: [{icon: 'lightbulb'}, {icon: 'alarm-light'}],
+    },
+    {
+      name: 'Cuisine',
+      devices: [{icon: 'lightbulb'}],
+    },
+  ];
+
   render() {
     return (
       <View>
-        <View style={styles.addRoomView}>
-          <Text style={styles.TextSalle}> Salle </Text>
-          <Icon name="plus-circle" size={30} style={styles.icon} />
+        <View style={styles.roomHeader}>
+          <Text style={styles.roomTitle}>Salle</Text>
+          <Icon name="plus-circle" size={30} />
         </View>
-        <View style={styles.salleContainer}>
-          <View style={styles.salleFlex}>
-            <RoomButton navigation={this.props.navigation} />
-            <RoomButton navigation={this.props.navigation} />
-          </View>
-          <View style={styles.salleFlex}>
-            <RoomButton navigation={this.props.navigation} />
-            <RoomButton navigation={this.props.navigation} />
-          </View>
-          <View style={styles.salleFlex}>
-            <RoomButton navigation={this.props.navigation} />
-            <RoomButton navigation={this.props.navigation} />
-          </View>
+        <View style={styles.roomContainer}>
+          {this.rooms.map(room => {
+            return (
+              <RoomButton room={room} navigation={this.props.navigation} />
+            );
+          })}
         </View>
       </View>
     );
@@ -34,28 +66,22 @@ export default class RoomList extends Component {
 }
 
 const styles = StyleSheet.create({
-  addRoomView: {
-    flex: 1,
+  roomHeader: {
+    marginHorizontal: '10%',
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
-  TextSalle: {
-    flex: 1,
-    marginLeft: 20,
+  roomTitle: {
     fontWeight: '600',
     fontSize: 45,
-    alignItems: 'flex-start',
     fontFamily: 'LexendDeca-Regular',
   },
-  icon: {
-    marginRight: 40,
-  },
-  salleContainer: {
-    marginBottom: 25,
-  },
-  salleFlex: {
-    flex: 1,
+  roomContainer: {
+    marginHorizontal: '10%',
     flexDirection: 'row',
+    flexWrap: 'wrap',
     alignContent: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
 });
