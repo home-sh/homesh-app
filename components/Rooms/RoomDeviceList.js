@@ -31,7 +31,6 @@ export default class FavoritesList extends Component {
 const styles = StyleSheet.create({
   favorisFlex: {
     flexDirection: 'row',
-    width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
   },

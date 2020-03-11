@@ -10,6 +10,7 @@ export default class RoomButton extends Component {
   render() {
     return (
       <TouchableHighlight
+        underlayColor={styles.salleSquare.backgroundColor}
         onPress={() => this.props.navigation.navigate('Room')}>
         <View style={styles.salleSquare}>
           <Icon style={{textAlign: 'right'}} name="record" size={25} />
@@ -26,6 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 30,
     height: 130,
+    width: 130,
     marginRight: 25,
     marginLeft: 25,
     backgroundColor: '#FFF',
