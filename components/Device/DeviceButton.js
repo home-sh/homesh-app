@@ -5,15 +5,14 @@ import { TouchableNativeFeedback, StyleSheet, Text, View } from 'react-native';
 export default class DeviceButton extends Component {
 
   render() {
-    const roomName = <Text> Room </Text>;
     return (
       <TouchableNativeFeedback
         onPress={() => this.props.navigation.navigate('Device')}>
 
         <View style={styles.favorisSquare}>
-          <Icon name="tv" size={this.props.iconSize} style={styles.icon} />
-          <Text style={styles.text}>Device</Text>
-          <View>{this.props.showRoomName ? roomName : null}</View>
+          <Icon name={this.props.iconName} size={this.props.iconSize} style={styles.icon} />
+          <View>{this.props.deviceName ? <Text style={styles.text}> {this.props.deviceName} </Text> : null}</View>
+          <View>{this.props.roomName ? <Text> {this.props.roomName} </Text> : null}</View>
         </View>
 
       </TouchableNativeFeedback>

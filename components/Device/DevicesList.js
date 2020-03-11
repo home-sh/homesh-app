@@ -4,11 +4,8 @@ import DeviceButton from '../Device/DeviceButton';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class DeviceList extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
-    var devices = [];
+    let devices = [];
 
     for (let i = 0; i < 9; i++) {
 
@@ -16,7 +13,8 @@ export default class DeviceList extends Component {
         <View style={styles.viewStyle} key={i}>
           <DeviceButton
             navigation={this.props.navigation}
-            showRoomName={false}
+            deviceName="COUCOU"
+            iconName="tv"
             iconSize={70}
           />
         </View>
