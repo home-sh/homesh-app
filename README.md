@@ -5,7 +5,7 @@ Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about St
 
 # Présentation du projet
 
-HomeSH est un projet réalisé dans le cadre de nos études. Il s'agit d'un projet rassemblant plusieurs membres désirant d'apprendre et de monter en compétence. 
+HomeSH est un projet réalisé dans le cadre de nos études. Il s'agit d'un projet rassemblant plusieurs membres désirant d'apprendre et de monter en compétence. Il s'agit d'un projet de domotique impliquant une application mobile et web, et de l'utilisation de produits connectés.
 
 
 ## Les membres de l'équipe
@@ -145,6 +145,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjYyNDAwNzQsMTU1MzYxMDA1OCwtMz
+eyJoaXN0b3J5IjpbLTE5OTgzNDkyNDYsMTU1MzYxMDA1OCwtMz
 MyNDU1MzYzXX0=
 -->
