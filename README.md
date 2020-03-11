@@ -12,7 +12,7 @@ HomeSH est un projet réalisé dans le cadre de nos études. Il s'agit d'un proj
 
 Nous sommes composé actuellement de 6 membres.  Tout d'abord, il y a Valentin GUIBERT, chef et coordinateur du projet. Il s'occupe essentiellement de la gestion de notre équipe et vérifie que tout le monde avance.
 Cependant, il développe aussi avec les trois autres développeurs. Nous avons Elouan LAFRECHOUX, Marceau DAVID, Abdelhamid NEJI. Les trois sont des développeurs full-stack.
-Nous avons aussi notre admin système qui s'occupe de la partie IOT et de la partie réseau du projet (Protocole réseau domotique, sécurité des données etc.). Enfin nous avons notre chargé de communication Jean-Baptiste 
+Nous avons aussi notre admin système qui s'occupe de la partie IOT et de la partie réseau du projet (Protocole réseau domotique, sécurité des données etc.). Enfin nous avons notre chargé de communication Jean-Baptiste Maréchal, qui s'occupe de toute la partie marketing et communication du projet.
 
 ## Switch to another file
 
@@ -145,6 +145,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYxNDcxOTIxLDE1NTM2MTAwNTgsLTMzMj
-Q1NTM2M119
+eyJoaXN0b3J5IjpbLTE5NjYyNDAwNzQsMTU1MzYxMDA1OCwtMz
+MyNDU1MzYzXX0=
 -->
