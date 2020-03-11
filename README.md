@@ -8,7 +8,7 @@ Car nous avons remarqué qu’il était étouffant pour l’utilisateur de devoi
 
 Il y a donc un besoin de centraliser sur une même interface l’ensemble des objets de la maison pour interagir plus facilement avec ceux-ci. 
 
-Lorsque le projet sera un peu plus abouti, nous in
+Lorsque le projet sera un peu plus abouti, nous intégreront un assistant de la vie quotidienne. Qui n'a jamais revé 
 
 Nous répondons de plus à un manque d’éthique des acteurs déjà en place en proposant une plateforme open-source garantissant la sécurité des données personnelles, des objets et de l’usager. 
 
@@ -159,7 +159,7 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTEzNTg4OTEsMTgzNzcxMDQ0OSw2OD
+eyJoaXN0b3J5IjpbMTY3NjM3MzQ0MywtMTAxMTM1ODg5MSw2OD
 QyMzgzNDMsMjQyNjg5NDkyLC00NDY0MjUwNiwtNzY1MzYyNjQ3
 LC0xOTk4MzQ5MjQ2LDE1NTM2MTAwNTgsLTMzMjQ1NTM2M119
 -->
