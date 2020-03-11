@@ -1,6 +1,14 @@
 # Bienvenue sur le projet HomeSH !
 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+r rst ro e n tai an lear ou ait un re eant pli rdn an edt mence  e se i me o acete ees  ot il le te ntin venue sur le projet HomeSH !
+
+HomeSH est un projet ayant pour but de démocratiser l'utilisation des objets connectés chez les particuliers. Pour cela nous proposons une application mobile de geoution domotique.
+
+Car nous avons remarqué qu’il était étouffant pour l’utilisateur de devoir utiliser une appli dédiée pour chaque objet connecté. Par exemple l’application Philips pour les ampoules, l’application Nest pour le thermostat, ou l’application Tp-link pour les prises connectées. 
+
+Il y a donc un besoin de centraliser sur une même interface l’ensemble des objets de la maison afin d’interagir plus facilement avec ceux-ci. 
+
+Nous répondons de plus à un manque d’éthique des acteurs déjà en place en proposant une plateforme open-source garantissant la sécurité des données personnelles, des objets et de l’usager. 
 
 
 # Présentation du projet
@@ -16,15 +24,15 @@ Nous avons aussi notre admin système qui s'occupe de la partie IOT et de la par
 
 ## Switch to another file
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+All your files and folders are presented as a tree in the filente re oucan sh from one to another by clicking a file in the tree.
 
 ## Rename a file
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+You can rename the current file by clicking the file name uo  l re  te aatior by clicking the **Re uon inxplorer.
 
 ## Delete a file
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+You can delete the current file ie citeemove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
 
 ## Export a file
 
@@ -145,6 +153,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTgzNDkyNDYsMTU1MzYxMDA1OCwtMz
-MyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTc2NTM2MjY0NywtMTk5ODM0OTI0NiwxNT
+UzNjEwMDU4LC0zMzI0NTUzNjNdfQ==
 -->
