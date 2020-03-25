@@ -1,33 +1,33 @@
-import React, {Component} from 'react';
-import {View, StyleSheet, Text, ScrollView} from 'react-native';
+import React, { Component } from 'react';
+import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import DeviceButton from './DeviceButton';
 
 export default class FavoritesList extends Component {
   render() {
+    let devices = [];
+
+    for (let i = 0; i < 9; i++) {
+      devices.push(
+        <View style={styles.viewStyle} key={i}>
+          <DeviceButton
+            navigation={this.props.navigation}
+            deviceName="Device"
+            roomName="Room"
+            iconName="tv"
+            iconSize={30}
+            shadow={true}
+            isOn={true}
+          />
+        </View>
+      )
+    }
+
     return (
       <View>
         <Text style={styles.Text}> Favoris </Text>
-        <ScrollView horizontal style={styles.favorisFlex}>
-          <View style={styles.viewStyle}>
-            <DeviceButton navigation={this.props.navigation} />
-          </View>
-          <View style={styles.viewStyle}>
-            <DeviceButton navigation={this.props.navigation} />
-          </View>
-          <View style={styles.viewStyle}>
-            <DeviceButton navigation={this.props.navigation} />
-          </View>
-          <View style={styles.viewStyle}>
-            <DeviceButton navigation={this.props.navigation} />
-          </View>
-          <View style={styles.viewStyle}>
-            <DeviceButton navigation={this.props.navigation} />
-          </View>
-          <View style={styles.viewStyle}>
-            <DeviceButton navigation={this.props.navigation} />
-          </View>
-          <View style={styles.viewStyle}>
-            <DeviceButton navigation={this.props.navigation} />
+        <ScrollView horizontal >
+          <View style={styles.favorisFlex}>
+            {devices}
           </View>
         </ScrollView>
       </View>
@@ -37,19 +37,23 @@ export default class FavoritesList extends Component {
 
 const styles = StyleSheet.create({
   Text: {
-    marginLeft: 40,
+    marginLeft: 10,
+    fontWeight: 'bold',
+    fontSize: 30,
+    alignItems: 'flex-start',
+    fontFamily: 'LexendDeca-Regular',
   },
   favorisFlex: {
     flex: 1,
     flexDirection: 'row',
-    marginLeft: 20,
-    marginRight: 20,
+    paddingRight: 20,
+    paddingLeft: 20,
+    marginTop: 15,
+    marginBottom: 20,
   },
   viewStyle: {
-    marginTop: 30,
-    marginBottom: 40,
-    width: 75,
-    height: 75,
-    marginRight: 30,
+    width: 80,
+    height: 80,
+    marginRight: 20,
   },
 });
