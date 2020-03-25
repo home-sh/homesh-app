@@ -12,9 +12,10 @@ export default class FavoritesList extends Component {
           <DeviceButton
             navigation={this.props.navigation}
             deviceName="Device"
-            roomName="coucou"
+            roomName="Room"
             iconName="tv"
             iconSize={30}
+            shadow={true}
           />
         </View>
       )
@@ -23,9 +24,11 @@ export default class FavoritesList extends Component {
     return (
       <View>
         <Text style={styles.Text}> Favoris </Text>
-        <ScrollView horizontal style={styles.favorisFlex}>
+        <ScrollView horizontal >
+          <View style={styles.favorisFlex}>
+            {devices}
+          </View>
 
-          {devices}
 
         </ScrollView>
       </View>
@@ -40,8 +43,8 @@ const styles = StyleSheet.create({
   favorisFlex: {
     flex: 1,
     flexDirection: 'row',
-    marginLeft: 20,
-    marginRight: 20,
+    paddingRight: 20,
+    marginLeft: 20
   },
   viewStyle: {
     marginTop: 30,
