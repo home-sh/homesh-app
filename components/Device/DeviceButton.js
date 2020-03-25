@@ -9,10 +9,10 @@ export default class DeviceButton extends Component {
       <TouchableNativeFeedback
         onPress={() => this.props.navigation.navigate('Device')}>
 
-        <View style={[styles.favorisSquare, this.props.shadow ? styles.shadow : null]}>
-          <Icon name={this.props.iconName} size={this.props.iconSize} style={styles.icon} />
-          <View>{this.props.deviceName ? <Text style={styles.text}> {this.props.deviceName} </Text> : null}</View>
-          <View>{this.props.roomName ? <Text style={styles.subtext}> {this.props.roomName} </Text> : null}</View>
+        <View style={[styles.favorisSquare, this.props.shadow ? styles.shadow : null, this.props.isOn ? styles.activated : null]}>
+          <Icon name={this.props.iconName} size={this.props.iconSize} style={styles.icon} color={this.props.isOn ? '#8BC34A' : 'black'} />
+          <View>{this.props.deviceName ? <Text style={[styles.text,  this.props.isOn ? styles.activated : null]}> {this.props.deviceName} </Text> : null}</View>
+          <View>{this.props.roomName ? <Text style={[styles.subtext,  this.props.isOn ? styles.activated : null]}> {this.props.roomName} </Text> : null}</View>
         </View>
 
       </TouchableNativeFeedback>
@@ -44,15 +44,19 @@ const styles = StyleSheet.create({
 
     elevation: 12,
   },
+  activated: {
+    borderColor: '#8BC34A',
+    color:'#8BC34A'
+  },
   text: {
     fontSize: 15,
     fontFamily: 'LexendDeca-Regular',
-    margin:-5
+    margin: -5
   },
   subtext: {
     fontSize: 10,
     fontFamily: 'LexendDeca-Regular',
-    margin:-1
+    margin: -1
   }
 
 });

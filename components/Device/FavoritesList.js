@@ -16,6 +16,7 @@ export default class FavoritesList extends Component {
             iconName="tv"
             iconSize={30}
             shadow={true}
+            isOn={true}
           />
         </View>
       )
