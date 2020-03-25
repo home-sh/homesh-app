@@ -28,8 +28,6 @@ export default class FavoritesList extends Component {
           <View style={styles.favorisFlex}>
             {devices}
           </View>
-
-
         </ScrollView>
       </View>
     );
@@ -38,19 +36,23 @@ export default class FavoritesList extends Component {
 
 const styles = StyleSheet.create({
   Text: {
-    marginLeft: 40,
+    marginLeft: 10,
+    fontWeight: 'bold',
+    fontSize: 30,
+    alignItems: 'flex-start',
+    fontFamily: 'LexendDeca-Regular',
   },
   favorisFlex: {
     flex: 1,
     flexDirection: 'row',
     paddingRight: 20,
-    marginLeft: 20
+    paddingLeft: 20,
+    marginTop: 15,
+    marginBottom: 20,
   },
   viewStyle: {
-    marginTop: 30,
-    marginBottom: 40,
-    width: 75,
-    height: 75,
-    marginRight: 30,
+    width: 80,
+    height: 80,
+    marginRight: 20,
   },
 });

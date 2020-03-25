@@ -28,10 +28,8 @@ export default class DeviceList extends Component {
           <Text style={styles.TextDevice}> Appareil </Text>
           <Icon name="plus-circle" size={30} style={styles.icon} />
         </View>
-        <View style={styles.devicesBody}>
-          <View style={styles.devicesContainer}>
-            {devices}
-          </View>
+        <View style={styles.devicesContainer}>
+          {devices}
         </View>
       </ScrollView>
     );

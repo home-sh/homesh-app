@@ -24,12 +24,8 @@ export default class RoomButton extends Component {
 
 const styles = StyleSheet.create({
   salleSquare: {
-    flex: 1,
-    marginTop: 30,
-    height: 130,
-    width: 130,
-    marginRight: 25,
-    marginLeft: 25,
+    height: '100%',
+    width: '100%',
     backgroundColor: '#FFF',
     borderRadius: 10,
     shadowColor: '#000',

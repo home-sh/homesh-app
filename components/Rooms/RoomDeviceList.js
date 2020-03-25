@@ -31,9 +31,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     display: 'flex',
     justifyContent: 'space-between',
+    paddingLeft:7,
+    paddingRight:7,
+    paddingBottom:3
   },
   viewStyle: {
-    width: 20,
-    height: 20,
+    width: 25,
+    height: 25,
   },
 });
