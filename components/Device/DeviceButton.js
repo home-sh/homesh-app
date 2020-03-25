@@ -1,62 +1,63 @@
 import React, {Component} from 'react';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import {TouchableNativeFeedback, StyleSheet, Text, View} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {TouchableHighlight, StyleSheet, Text, View} from 'react-native';
 
 export default class DeviceButton extends Component {
   render() {
     return (
-      <TouchableNativeFeedback
+      <TouchableHighlight
+        underlayColor={styles.device.backgroundColor}
         onPress={() => this.props.navigation.navigate('Device')}>
         <View
           style={[
-            styles.favorisSquare,
+            styles.device,
             this.props.shadow ? styles.shadow : null,
             this.props.isOn ? styles.activated : null,
           ]}>
-          <Icon
-            name={this.props.iconName}
-            size={this.props.iconSize}
-            style={styles.icon}
-            color={this.props.isOn ? '#8BC34A' : 'black'}
-          />
-          <View>
-            {this.props.deviceName ? (
+          {this.props.iconName ? (
+            <Icon
+              name={this.props.iconName}
+              size={this.props.iconSize}
+              style={styles.icon}
+              color={this.props.isOn ? '#8BC34A' : 'black'}
+            />
+          ) : null}
+          {this.props.deviceName ? (
+            <View>
               <Text
                 style={[
                   styles.text,
                   this.props.isOn ? styles.activated : null,
                 ]}>
-                {' '}
-                {this.props.deviceName}{' '}
+                {this.props.deviceName}
               </Text>
-            ) : null}
-          </View>
-          <View>
-            {this.props.roomName ? (
+            </View>
+          ) : null}
+          {this.props.roomName ? (
+            <View>
               <Text
                 style={[
                   styles.subtext,
                   this.props.isOn ? styles.activated : null,
                 ]}>
-                {' '}
-                {this.props.roomName}{' '}
+                {this.props.roomName}
               </Text>
-            ) : null}
-          </View>
+            </View>
+          ) : null}
         </View>
-      </TouchableNativeFeedback>
+      </TouchableHighlight>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  favorisSquare: {
+  device: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: '100%',
     height: '100%',
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#FFF',
     borderRadius: 5,
     borderStyle: 'solid',
     borderWidth: 1,
@@ -70,7 +71,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.37,
     shadowRadius: 7.49,
-
     elevation: 12,
   },
   activated: {
@@ -80,11 +80,10 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 15,
     fontFamily: 'LexendDeca-Regular',
-    margin: -5,
   },
   subtext: {
     fontSize: 10,
     fontFamily: 'LexendDeca-Regular',
-    margin: -1,
+    marginTop: -5,
   },
 });

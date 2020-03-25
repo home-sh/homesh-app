@@ -7,58 +7,86 @@ export default class RoomList extends Component {
   constructor(props) {
     super(props);
   }
-  render() {
-    let rooms = [];
 
-    for (let i = 0; i < 9; i++) {
-      rooms.push(
-        <View style={styles.viewStyle} key={i}>
-          <RoomButton navigation={this.props.navigation} />
-        </View>,
-      );
-    }
+  rooms = [
+    {
+      name: 'Chambre',
+      devices: [
+        {icon: 'lightbulb'},
+        {icon: 'lamp'},
+        {icon: 'television'},
+        {icon: 'alarm'},
+      ],
+    },
+    {
+      name: 'Salle de bain',
+      devices: [{icon: 'lightbulb'}],
+    },
+    {
+      name: 'Salon',
+      devices: [
+        {icon: 'lightbulb'},
+        {icon: 'television'},
+        {icon: 'laptop'},
+        {icon: 'desktop-classic'},
+        {icon: 'radio'},
+        {icon: 'radio'},
+      ],
+    },
+    {
+      name: 'Bureau',
+      devices: [{icon: 'lightbulb'}, {icon: 'desk-lamp'}],
+    },
+    {
+      name: 'Salle à manger',
+      devices: [{icon: 'lightbulb'}, {icon: 'alarm-light'}],
+    },
+    {
+      name: 'Cuisine',
+      devices: [{icon: 'lightbulb'}],
+    },
+  ];
+
+  render() {
     return (
       <View>
-        <View style={styles.addRoomView}>
-          <Text style={styles.TextSalle}> Salle </Text>
-          <Icon name="plus-circle" size={30} style={styles.icon} />
+        <View style={styles.roomHeader}>
+          <Text style={styles.roomTitle}>Salle</Text>
+          <Icon name="plus-circle" size={30} />
         </View>
-        <View style={styles.salleContainer}>{rooms}</View>
+        <View style={styles.roomContainer}>
+          {this.rooms.map((room, index) => {
+            return (
+              <RoomButton
+                key={index}
+                room={room}
+                navigation={this.props.navigation}
+              />
+            );
+          })}
+        </View>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  addRoomView: {
-    flex: 1,
+  roomHeader: {
+    marginHorizontal: '10%',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
-  TextSalle: {
-    flex: 1,
-    marginLeft: 10,
-    fontWeight: 'bold',
-    fontSize: 30,
-    alignItems: 'flex-start',
+  roomTitle: {
+    fontWeight: '600',
+    fontSize: 45,
     fontFamily: 'LexendDeca-Regular',
   },
-  icon: {
-    marginRight: 40,
-  },
-  salleContainer: {
-    marginTop: 15,
-    marginBottom: 25,
-    display: 'flex',
+  roomContainer: {
+    marginHorizontal: '10%',
     flexDirection: 'row',
-    justifyContent: 'center',
     flexWrap: 'wrap',
-  },
-  viewStyle: {
-    width: 170,
-    height: 170,
-    marginBottom: 25,
-    marginRight: 10,
-    marginLeft: 10,
+    alignContent: 'center',
+    justifyContent: 'space-between',
   },
 });

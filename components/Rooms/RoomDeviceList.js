@@ -1,25 +1,48 @@
-import React, { Component } from 'react';
-import { View, StyleSheet, Text, ScrollView } from 'react-native';
+import React, {Component} from 'react';
+import {View, StyleSheet} from 'react-native';
 import DeviceButton from '../Device/DeviceButton';
 
-export default class FavoritesList extends Component {
-  render() {
-    let devices = [];
+export default class RoomDeviceList extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-    for (let i = 0; i < 4; i++) {
-      devices.push(
-        <View style={styles.viewStyle} key={i}>
-          <DeviceButton 
-          navigation={this.props.navigation}
-          iconName="tv" />
+  renderIcons() {
+    let {devices} = this.props;
+    let icons = devices.map((device, index) => {
+      console.log(device);
+      if (index < 5) {
+        return (
+          <View key={index} style={styles.viewStyle}>
+            <DeviceButton
+              iconName={device.icon}
+              iconSize={15}
+              navigation={this.props.navigation}
+            />
+          </View>
+        );
+      } else {
+        return null;
+      }
+    });
+    if (devices.length > 5) {
+      icons[4] = (
+        <View style={styles.viewStyle}>
+          <DeviceButton
+            deviceName={`${devices.length - 5}+`}
+            navigation={this.props.navigation}
+          />
         </View>
-      )
+      );
     }
+    return icons;
+  }
 
+  render() {
     return (
       <View>
         <View horizontal style={styles.favorisFlex}>
-          {devices}
+          {this.renderIcons()}
         </View>
       </View>
     );
@@ -29,14 +52,11 @@ export default class FavoritesList extends Component {
 const styles = StyleSheet.create({
   favorisFlex: {
     flexDirection: 'row',
-    display: 'flex',
-    justifyContent: 'space-between',
-    paddingLeft:7,
-    paddingRight:7,
-    paddingBottom:3
+    justifyContent: 'flex-start',
   },
   viewStyle: {
-    width: 25,
-    height: 25,
+    width: 20,
+    height: 20,
+    marginHorizontal: 2,
   },
 });

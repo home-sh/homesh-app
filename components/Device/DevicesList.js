@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, Text } from 'react-native';
+import React, {Component} from 'react';
+import {View, StyleSheet, ScrollView, Text} from 'react-native';
 import DeviceButton from '../Device/DeviceButton';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -8,7 +8,6 @@ export default class DeviceList extends Component {
     let devices = [];
 
     for (let i = 0; i < 9; i++) {
-
       devices.push(
         <View style={styles.viewStyle} key={i}>
           <DeviceButton
@@ -18,8 +17,8 @@ export default class DeviceList extends Component {
             iconSize={70}
             shadow={true}
           />
-        </View>
-      )
+        </View>,
+      );
     }
     return (
       <ScrollView>
@@ -28,9 +27,7 @@ export default class DeviceList extends Component {
           <Text style={styles.TextDevice}> Appareil </Text>
           <Icon name="plus-circle" size={30} style={styles.icon} />
         </View>
-        <View style={styles.devicesContainer}>
-          {devices}
-        </View>
+        <View style={styles.devicesContainer}>{devices}</View>
       </ScrollView>
     );
   }
@@ -43,7 +40,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   viewStyle: {
     width: 140,

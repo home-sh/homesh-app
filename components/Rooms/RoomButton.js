@@ -13,9 +13,17 @@ export default class RoomButton extends Component {
         underlayColor={styles.salleSquare.backgroundColor}
         onPress={() => this.props.navigation.navigate('Room')}>
         <View style={styles.salleSquare}>
-          <Icon style={{textAlign: 'right'}} color="#212121" name="record" size={25} />
-          <Text style={styles.RoomText}>Room</Text>
-          <RoomDeviceList navigation={this.props.navigation} />
+          <Icon
+            style={{textAlign: 'right'}}
+            color="#212121"
+            name="record"
+            size={25}
+          />
+          <Text style={styles.RoomText}>{this.props.room.name || 'Room'}</Text>
+          <RoomDeviceList
+            devices={this.props.room.devices}
+            navigation={this.props.navigation}
+          />
         </View>
       </TouchableHighlight>
     );
@@ -24,8 +32,10 @@ export default class RoomButton extends Component {
 
 const styles = StyleSheet.create({
   salleSquare: {
-    height: '100%',
-    width: '100%',
+    flex: 1,
+    marginTop: 30,
+    height: 130,
+    width: 130,
     backgroundColor: '#FFF',
     borderRadius: 10,
     shadowColor: '#000',
@@ -42,7 +52,7 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: '#BDBDBD'
+    borderColor: '#BDBDBD',
   },
   RoomText: {
     fontSize: 20,
