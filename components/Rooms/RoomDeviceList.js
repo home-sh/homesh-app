@@ -13,7 +13,7 @@ export default class RoomDeviceList extends Component {
       console.log(device);
       if (index < 5) {
         return (
-          <View style={styles.viewStyle}>
+          <View key={index} style={styles.viewStyle}>
             <DeviceButton
               icon={device.icon}
               iconSize={15}

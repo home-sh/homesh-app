@@ -54,9 +54,13 @@ export default class RoomList extends Component {
           <Icon name="plus-circle" size={30} />
         </View>
         <View style={styles.roomContainer}>
-          {this.rooms.map(room => {
+          {this.rooms.map((room, index) => {
             return (
-              <RoomButton room={room} navigation={this.props.navigation} />
+              <RoomButton
+                key={index}
+                room={room}
+                navigation={this.props.navigation}
+              />
             );
           })}
         </View>
