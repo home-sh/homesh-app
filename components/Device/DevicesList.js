@@ -16,6 +16,7 @@ export default class DeviceList extends Component {
             deviceName="COUCOU"
             iconName="tv"
             iconSize={70}
+            shadow={true}
           />
         </View>
       )

@@ -44,6 +44,9 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
     paddingRight: 5,
     paddingLeft: 5,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: '#BDBDBD'
   },
   RoomText: {
     fontSize: 20,
