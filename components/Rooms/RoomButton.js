@@ -13,7 +13,7 @@ export default class RoomButton extends Component {
         underlayColor={styles.salleSquare.backgroundColor}
         onPress={() => this.props.navigation.navigate('Room')}>
         <View style={styles.salleSquare}>
-          <Icon style={{textAlign: 'right'}} name="record" size={25} />
+          <Icon style={{textAlign: 'right'}} color="#212121" name="record" size={25} />
           <Text style={styles.RoomText}>Room</Text>
           <RoomDeviceList navigation={this.props.navigation} />
         </View>
