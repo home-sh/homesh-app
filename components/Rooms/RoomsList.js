@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import React, {Component} from 'react';
+import {View, StyleSheet, Text} from 'react-native';
 import RoomButton from './RoomButton';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -11,14 +11,11 @@ export default class RoomList extends Component {
     let rooms = [];
 
     for (let i = 0; i < 9; i++) {
-
       rooms.push(
         <View style={styles.viewStyle} key={i}>
-          <RoomButton
-            navigation={this.props.navigation}
-          />
-        </View>
-      )
+          <RoomButton navigation={this.props.navigation} />
+        </View>,
+      );
     }
     return (
       <View>
@@ -26,9 +23,7 @@ export default class RoomList extends Component {
           <Text style={styles.TextSalle}> Salle </Text>
           <Icon name="plus-circle" size={30} style={styles.icon} />
         </View>
-        <View style={styles.salleContainer}>
-          {rooms}
-        </View>
+        <View style={styles.salleContainer}>{rooms}</View>
       </View>
     );
   }
@@ -38,7 +33,7 @@ const styles = StyleSheet.create({
   addRoomView: {
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   TextSalle: {
     flex: 1,
@@ -57,7 +52,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   viewStyle: {
     width: 170,
@@ -65,5 +60,5 @@ const styles = StyleSheet.create({
     marginBottom: 25,
     marginRight: 10,
     marginLeft: 10,
-  }
+  },
 });
