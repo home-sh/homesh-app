@@ -13,13 +13,19 @@ import firebase from 'firebase';
 import LabeledInput from '../components/LabeledInput';
 
 export default class Register extends Component {
-  state = {email: '', password: '', errorMessage: null};
+  state = {email: '', password: '', confirmPassword: '', errorMessage: null};
   handleLogin = () => {
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .then(() => this.props.navigation.navigate('App'))
-      .catch(error => this.setState({errorMessage: error.message}));
+    if (this.state.password === this.state.confirmPassword) {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.state.email, this.state.password)
+        .then(() => this.props.navigation.navigate('App'))
+        .catch(error => this.setState({errorMessage: error.message}));
+    } else {
+      this.setState({
+        errorMessage: 'Les mots de passe doivent être identique !',
+      });
+    }
   };
 
   render() {
@@ -58,6 +64,8 @@ export default class Register extends Component {
               textContentType="password"
               autoCapitalize="none"
               secureTextEntry={true}
+              onChangeText={confirmPassword => this.setState({confirmPassword})}
+              value={this.state.confirmPassword}
             />
             <Button title="Créer un compte" onPress={this.handleLogin} />
             <Text
