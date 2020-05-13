@@ -53,11 +53,19 @@ export default class Register extends Component {
               onChangeText={password => this.setState({password})}
               value={this.state.password}
             />
-            <Button title="Créer un compte" onPress={this.handleLogin} />
-            <Button
-              title="Connectez vous ici"
-              onPress={() => this.props.navigation.navigate('Signin')}
+            <LabeledInput
+              label="Confirmation mot de passe"
+              textContentType="password"
+              autoCapitalize="none"
+              secureTextEntry={true}
             />
+            <Button title="Créer un compte" onPress={this.handleLogin} />
+            <Text
+              style={styles.textBleu}
+              onPress={() => this.props.navigation.navigate('Signin')}>
+              {' '}
+              Connectez vous ici
+            </Text>
           </View>
         </KeyboardAvoidingView>
       </SafeAreaView>
@@ -66,6 +74,9 @@ export default class Register extends Component {
 }
 
 const styles = StyleSheet.create({
+  textBleu: {
+    color: 'blue',
+  },
   fullscreen: {
     flex: 1,
   },

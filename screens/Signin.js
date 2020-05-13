@@ -51,10 +51,12 @@ export default class Signin extends Component {
               value={this.state.password}
             />
             <Button title="Se Connecter" onPress={this.handleLogin} />
-            <Button
-              title="Créer un compte ici"
-              onPress={() => this.props.navigation.navigate('Register')}
-            />
+            <Text
+              style={styles.textBleu}
+              onPress={() => this.props.navigation.navigate('Register')}>
+              {' '}
+              Créer un compte ici
+            </Text>
           </View>
         </KeyboardAvoidingView>
       </SafeAreaView>
@@ -63,6 +65,9 @@ export default class Signin extends Component {
 }
 
 const styles = StyleSheet.create({
+  textBleu: {
+    color: 'blue',
+  },
   fullscreen: {
     flex: 1,
   },
