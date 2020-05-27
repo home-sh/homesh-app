@@ -12,7 +12,13 @@ import firebase from 'firebase';
 import LabeledInput from '../components/LabeledInput';
 
 export default class Signin extends Component {
-  state = {email: '', password: '', errorMessage: null};
+  state = {
+    email: '',
+    password: '',
+    errorMessage: null,
+    showPassword: true,
+    icon: 'eye-slash',
+  };
   handleLogin = () => {
     const {email, password} = this.state;
     firebase
@@ -22,6 +28,11 @@ export default class Signin extends Component {
       .catch(error => this.setState({errorMessage: error.message}));
   };
 
+  toggleSwitch = () => {
+    this.state.icon !== 'eye-slash'
+      ? this.setState({showPassword: true, icon: 'eye-slash'})
+      : this.setState({showPassword: false, icon: 'eye'});
+  };
   render() {
     return (
       <SafeAreaView style={styles.fullscreen}>
@@ -43,10 +54,12 @@ export default class Signin extends Component {
               value={this.state.email}
             />
             <LabeledInput
+              name={this.state.icon}
+              onpress={this.toggleSwitch}
               label="Mot de passe"
               textContentType="password"
               autoCapitalize="none"
-              secureTextEntry={true}
+              secureTextEntry={this.state.showPassword}
               onChangeText={password => this.setState({password})}
               value={this.state.password}
             />

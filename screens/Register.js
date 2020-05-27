@@ -10,7 +10,6 @@ import {
   Platform,
 } from 'react-native';
 import firebase from 'firebase';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import LabeledInput from '../components/LabeledInput';
 
 export default class Register extends Component {
@@ -74,6 +73,7 @@ export default class Register extends Component {
               <LabeledInput
                 name={this.state.icon}
                 onpress={this.toggleSwitch}
+                label="Mot de passe"
                 textContentType="password"
                 autoCapitalize="none"
                 secureTextEntry={this.state.showPassword}
