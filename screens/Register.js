@@ -10,10 +10,20 @@ import {
   Platform,
 } from 'react-native';
 import firebase from 'firebase';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import LabeledInput from '../components/LabeledInput';
 
 export default class Register extends Component {
-  state = {email: '', password: '', confirmPassword: '', errorMessage: null};
+  state = {
+    email: '',
+    password: '',
+    confirmPassword: '',
+    errorMessage: null,
+    showPassword: true,
+    showCPassword: true,
+    icon: 'eye-slash',
+    iconC: 'eye-slash',
+  };
   handleLogin = () => {
     if (this.state.password === this.state.confirmPassword) {
       firebase
@@ -27,7 +37,16 @@ export default class Register extends Component {
       });
     }
   };
-
+  toggleSwitch = () => {
+    this.state.icon !== 'eye-slash'
+      ? this.setState({showPassword: true, icon: 'eye-slash'})
+      : this.setState({showPassword: false, icon: 'eye'});
+  };
+  toggleSwitch2 = () => {
+    this.state.iconC !== 'eye-slash'
+      ? this.setState({showCPassword: true, iconC: 'eye-slash'})
+      : this.setState({showCPassword: false, iconC: 'eye'});
+  };
   render() {
     return (
       <SafeAreaView style={styles.fullscreen}>
@@ -51,19 +70,24 @@ export default class Register extends Component {
               onChangeText={email => this.setState({email})}
               value={this.state.email}
             />
+            <View style={styles.passwordContainer}>
+              <LabeledInput
+                name={this.state.icon}
+                onpress={this.toggleSwitch}
+                textContentType="password"
+                autoCapitalize="none"
+                secureTextEntry={this.state.showPassword}
+                onChangeText={password => this.setState({password})}
+                value={this.state.password}
+              />
+            </View>
             <LabeledInput
-              label="Mot de passe"
-              textContentType="password"
-              autoCapitalize="none"
-              secureTextEntry={true}
-              onChangeText={password => this.setState({password})}
-              value={this.state.password}
-            />
-            <LabeledInput
+              name={this.state.iconC}
+              onpress={this.toggleSwitch2}
               label="Confirmation mot de passe"
               textContentType="password"
               autoCapitalize="none"
-              secureTextEntry={true}
+              secureTextEntry={this.state.showCPassword}
               onChangeText={confirmPassword => this.setState({confirmPassword})}
               value={this.state.confirmPassword}
             />
