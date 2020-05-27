@@ -2,26 +2,44 @@ import React, {Component} from 'react';
 import {Text, StyleSheet, TouchableHighlight, View} from 'react-native';
 import RoomDeviceList from './RoomDeviceList';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import firebase from 'firebase';
+import '@firebase/firestore';
 
 export default class RoomButton extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    devices: [],
+  };
+
+  async componentDidMount() {
+    this.unsubscribe = await this.props.room.ref
+      .collection('devices')
+      .onSnapshot(snapshot => {
+        this.setState({devices: snapshot.docs});
+      });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
   }
   render() {
     return (
       <TouchableHighlight
-        underlayColor={styles.salleSquare.backgroundColor}
-        onPress={() => this.props.navigation.navigate('Room')}>
-        <View style={styles.salleSquare}>
+        underlayColor={styles.room.backgroundColor}
+        onPress={() =>
+          this.props.navigation.navigate('Room', {room: this.props.room})
+        }>
+        <View style={styles.room}>
           <Icon
             style={{textAlign: 'right'}}
             color="#212121"
             name="record"
             size={25}
           />
-          <Text style={styles.RoomText}>{this.props.room.name || 'Room'}</Text>
+          <Text style={styles.text}>
+            {this.props.room.data().name || 'Room'}
+          </Text>
           <RoomDeviceList
-            devices={this.props.room.devices}
+            devices={this.state.devices}
             navigation={this.props.navigation}
           />
         </View>
@@ -31,11 +49,11 @@ export default class RoomButton extends Component {
 }
 
 const styles = StyleSheet.create({
-  salleSquare: {
-    flex: 1,
-    marginTop: 30,
-    height: 130,
-    width: 130,
+  room: {
+    justifyContent: 'space-between',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
     backgroundColor: '#FFF',
     borderRadius: 10,
     shadowColor: '#000',
@@ -46,7 +64,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.37,
     shadowRadius: 7.49,
     elevation: 12,
-    justifyContent: 'space-between',
     paddingBottom: 5,
     paddingRight: 5,
     paddingLeft: 5,
@@ -54,9 +71,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#BDBDBD',
   },
-  RoomText: {
-    fontSize: 20,
-    fontFamily: 'LexendDeca-Regular',
+  text: {
     textAlign: 'center',
+    fontSize: 15,
+    fontFamily: 'LexendDeca-Regular',
   },
 });

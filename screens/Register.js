@@ -10,15 +10,25 @@ import {
   Platform,
 } from 'react-native';
 import firebase from 'firebase';
+import '@firebase/firestore';
 import LabeledInput from '../components/LabeledInput';
 
 export default class Register extends Component {
   state = {email: '', password: '', errorMessage: null};
-  handleLogin = () => {
+  handleRegister = () => {
     firebase
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .then(() => this.props.navigation.navigate('App'))
+      .then(async data => {
+        await firebase
+          .firestore()
+          .collection('users')
+          .doc(data.user.uid)
+          .set({
+            email: this.state.email,
+          });
+        this.props.navigation.navigate('App');
+      })
       .catch(error => this.setState({errorMessage: error.message}));
   };
 
@@ -53,7 +63,7 @@ export default class Register extends Component {
               onChangeText={password => this.setState({password})}
               value={this.state.password}
             />
-            <Button title="Créer un compte" onPress={this.handleLogin} />
+            <Button title="Créer un compte" onPress={this.handleRegister} />
             <Button
               title="Connectez vous ici"
               onPress={() => this.props.navigation.navigate('Signin')}

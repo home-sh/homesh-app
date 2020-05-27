@@ -9,13 +9,12 @@ export default class RoomDeviceList extends Component {
 
   renderIcons() {
     let {devices} = this.props;
-    let icons = devices.map((device, index) => {
-      console.log(device);
+    let icons = this.props.devices.map((device, index) => {
       if (index < 5) {
         return (
           <View key={index} style={styles.viewStyle}>
             <DeviceButton
-              iconName={device.icon}
+              iconName={device.data().icon}
               iconSize={15}
               navigation={this.props.navigation}
             />
@@ -51,12 +50,14 @@ export default class RoomDeviceList extends Component {
 
 const styles = StyleSheet.create({
   favorisFlex: {
+    width: 20,
+    height: 20,
     flexDirection: 'row',
     justifyContent: 'flex-start',
   },
   viewStyle: {
-    width: 20,
-    height: 20,
+    width: '100%',
+    height: '100%',
     marginHorizontal: 2,
   },
 });

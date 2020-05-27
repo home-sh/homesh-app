@@ -13,7 +13,6 @@ export default class Settings extends Component {
   render() {
     return (
       <View>
-        <Text> Settings </Text>
         <Button title="DECONNEXION" onPress={this.signOutUser} />
       </View>
     );

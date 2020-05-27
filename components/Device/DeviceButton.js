@@ -7,7 +7,18 @@ export default class DeviceButton extends Component {
     return (
       <TouchableHighlight
         underlayColor={styles.device.backgroundColor}
-        onPress={() => this.props.navigation.navigate('Device')}>
+        onPress={() =>
+          this.props.navigation.navigate('Device', {
+            device: this.props.device,
+          })
+        }
+        // onLongPress={() =>
+        //   this.props.navigation.navigate('Device', {
+        //     device: this.props.device,
+        //     favorite: this.props.device.data().favorite,
+        //   })
+        // }
+      >
         <View
           style={[
             styles.device,
@@ -23,26 +34,19 @@ export default class DeviceButton extends Component {
             />
           ) : null}
           {this.props.deviceName ? (
-            <View>
-              <Text
-                style={[
-                  styles.text,
-                  this.props.isOn ? styles.activated : null,
-                ]}>
-                {this.props.deviceName}
-              </Text>
-            </View>
+            <Text
+              style={[styles.text, this.props.isOn ? styles.activated : null]}>
+              {this.props.deviceName}
+            </Text>
           ) : null}
           {this.props.roomName ? (
-            <View>
-              <Text
-                style={[
-                  styles.subtext,
-                  this.props.isOn ? styles.activated : null,
-                ]}>
-                {this.props.roomName}
-              </Text>
-            </View>
+            <Text
+              style={[
+                styles.subtext,
+                this.props.isOn ? styles.activated : null,
+              ]}>
+              {this.props.roomName}
+            </Text>
           ) : null}
         </View>
       </TouchableHighlight>
@@ -78,6 +82,7 @@ const styles = StyleSheet.create({
     color: '#8BC34A',
   },
   text: {
+    textAlign: 'center',
     fontSize: 15,
     fontFamily: 'LexendDeca-Regular',
   },

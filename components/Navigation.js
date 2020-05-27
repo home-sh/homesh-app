@@ -6,7 +6,9 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 
 import Home from '../screens/Home/HomePage';
 import Room from '../screens/Home/RoomPage';
+import AddRoom from '../screens/Home/AddRoom';
 import Device from '../screens/Home/DevicePage';
+import AddDevice from '../screens/Home/AddDevice';
 import Statistics from '../screens/Statistics';
 import Settings from '../screens/Settings';
 import Signin from '../screens/Signin';
@@ -16,7 +18,9 @@ import Loading from '../screens/Loading';
 const HomeStack = createStackNavigator({
   Home,
   Room,
+  AddRoom,
   Device,
+  AddDevice,
 });
 
 const StatisticsStack = createStackNavigator({

@@ -1,29 +1,53 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {Text, View, StyleSheet, Button} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default class DevicePage extends Component {
-  render() {
-    return (
-      <View style={styles.addRoomView}>
-        <Text style={styles.TextDevice}> Appareil </Text>
-        <Icon name="cog" size={30} style={styles.icon} />
-      </View>
+  static navigationOptions = ({navigation}) => {
+    return {
+      title: navigation.getParam('device').data().name,
+      headerRight: () => (
+        <Icon
+          name={navigation.getParam('favorite') ? 'star' : 'star-outline'}
+          onPress={navigation.getParam('toggleFavorite')}
+          size={30}
+          style={styles.icon}
+        />
+      ),
+    };
+  };
+
+  device = this.props.navigation.getParam('device');
+
+  componentDidMount() {
+    this.props.navigation.setParams({favorite: this.device.data().favorite});
+    this.props.navigation.setParams({toggleFavorite: this.toggleFavorite});
+  }
+
+  toggleFavorite = async () => {
+    this.props.navigation.setParams({favorite: !this.device.data().favorite});
+    await this.device.ref.set(
+      {favorite: !this.device.data().favorite},
+      {merge: true},
     );
+  };
+
+  render() {
+    return <View style={styles.deviceHeader} />;
   }
 }
 
 const styles = StyleSheet.create({
-  icon: {
-    marginRight: 40,
-  },
-  addRoomView: {
-    flex: 1,
+  deviceHeader: {
+    marginVertical: 25,
+    marginHorizontal: 25,
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
-  TextDevice: {
-    flex: 1,
-    marginLeft: 30,
-    fontSize: 20,
+  deviceTitle: {
+    fontWeight: '600',
+    fontSize: 25,
+    fontFamily: 'LexendDeca-Regular',
   },
 });

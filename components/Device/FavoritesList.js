@@ -7,7 +7,7 @@ export default class FavoritesList extends Component {
     return (
       <View>
         <Text style={styles.Text}> Favoris </Text>
-        <ScrollView style={styles.list} horizontal>
+        <ScrollView contentContainerStyle={styles.list} horizontal>
           {this.props.favorites.map((device, i) => {
             return (
               <View style={styles.viewStyle} key={i}>
@@ -30,7 +30,15 @@ export default class FavoritesList extends Component {
 }
 
 const styles = StyleSheet.create({
+  list: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 125,
+    marginHorizontal: 20,
+  },
   Text: {
+    marginHorizontal: 20,
     fontWeight: 'bold',
     fontSize: 30,
     alignItems: 'flex-start',

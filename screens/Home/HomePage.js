@@ -19,15 +19,13 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <SafeAreaView>
-        <ScrollView style={styles.mainContainer}>
-          <FavoritesList
-            favorites={this.favorites}
-            navigation={this.props.navigation}
-          />
-          <RoomList navigation={this.props.navigation} />
-        </ScrollView>
-      </SafeAreaView>
+      <ScrollView style={styles.mainContainer}>
+        <FavoritesList
+          favorites={this.favorites}
+          navigation={this.props.navigation}
+        />
+        <RoomList navigation={this.props.navigation} />
+      </ScrollView>
     );
   }
 }
